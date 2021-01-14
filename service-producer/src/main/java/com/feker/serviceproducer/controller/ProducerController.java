@@ -8,8 +8,6 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class ProducerController {
 
-
-
     @PostMapping("/getPortInfo")
     public String produce(@RequestBody JSONObject jsonObject) {
         log.info("传入参数为   {}",jsonObject.toString());
