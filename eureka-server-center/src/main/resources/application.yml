@@ -1,0 +1,21 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: eureka-server-center
+#  security:
+#    basic:
+#      enable:true
+#    user:
+#      name: root
+#      password: 842234092
+eureka:
+  instance:
+    hostname: eureka-server
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://eureka-server:8888/eureka/
+#  server:
+#    enable-self-preservation: false
