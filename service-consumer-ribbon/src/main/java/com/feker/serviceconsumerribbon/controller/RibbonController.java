@@ -10,19 +10,30 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 public class RibbonController {
 
-    @Value("http://service-producer/getPortInfo")
-    String url;
+    @Value("http://service-producer/postPortInfo/")
+    String urlPost;
+
+    @Value("http://service-producer/getPortInfo/")
+    String urlGet;
 
     @Autowired
     RestTemplate restTemplate;
 
-    @GetMapping("/getPoducerInfo")
-    public String getPoducerInfo() {
+    @GetMapping("/postPoducerInfo")
+    public String postPoducerInfo() {
         JSONObject json = new JSONObject();
         json.put("age", 18);
         json.put("name", "小芳");
         json.put("address", "广东深圳");
-        String result = this.restTemplate.postForObject(url,json,String.class);
+        String result = this.restTemplate.postForObject(urlPost,json,String.class);
         return result;
     }
+
+    @GetMapping("/getPoducerInfo")
+    public String getPoducerInfo() {
+        Integer id=1;
+        String result = this.restTemplate.getForObject(urlGet+id,String.class);
+        return result;
+    }
+
 }
