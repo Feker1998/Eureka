@@ -15,4 +15,4 @@ mac去/private/etc路径下给hosts添加这几行（Windows在C:\WINDOWS\system
 消费者：
   service-consumer-ribbon
 
-搭建demo还有好多小坑，但是我都解决了，有疑问可以打击一起解决
+搭建demo还有好多小坑，但是我都解决了，有疑问可以大家一起解决
