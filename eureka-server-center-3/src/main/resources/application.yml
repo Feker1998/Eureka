@@ -1,5 +1,5 @@
 server:
-  port: 8888
+  port: 8890
 spring:
   application:
     name: eureka-server-center
@@ -11,9 +11,9 @@ spring:
 #      password: 842234092
 eureka:
   instance:
-    hostname: eureka-server
+    hostname: eureka-server-3
   client:
     service-url:
-      defaultZone: http://eureka-server-2:8889/eureka/,http://eureka-server-3:8890/eureka/
+      defaultZone: http://eureka-server:8888/eureka/,http://eureka-server-2:8889/eureka/
 #  server:
 #    enable-self-preservation: false

@@ -9,6 +9,8 @@
         <option value="$PROJECT_DIR$/service-producer/pom.xml" />
         <option value="$PROJECT_DIR$/service-consumer-ribbon/pom.xml" />
         <option value="$PROJECT_DIR$/service-producer2/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka-server-center-2/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka-server-center-3/pom.xml" />
       </list>
     </option>
   </component>
