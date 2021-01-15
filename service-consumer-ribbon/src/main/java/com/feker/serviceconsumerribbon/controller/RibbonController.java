@@ -4,9 +4,12 @@ import com.alibaba.fastjson.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 @RestController
 public class RibbonController {
 
@@ -15,6 +18,9 @@ public class RibbonController {
 
     @Value("http://service-producer/getPortInfo/")
     String urlGet;
+
+    @Value("${server.port}")
+    String serverPort;
 
     @Autowired
     RestTemplate restTemplate;
@@ -36,4 +42,10 @@ public class RibbonController {
         return result;
     }
 
+    @GetMapping("/getPortInfo/{id}")
+    public String produceGet(@PathVariable("id") Integer id) {
+        log.info("传入参数为   {}",id);
+        id+=1;
+        return "调用服务的端口号为：" + serverPort+ "   返回值为："+id;
+    }
 }
