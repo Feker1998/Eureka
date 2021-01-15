@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="eureka-server-center" />
+        <module name="service-producer2" />
         <module name="service-consumer-ribbon" />
         <module name="service-producer" />
       </profile>
@@ -17,6 +18,7 @@
       <module name="eureka-server-center" options="-parameters" />
       <module name="service-consumer-ribbon" options="-parameters" />
       <module name="service-producer" options="-parameters" />
+      <module name="service-producer2" options="-parameters" />
     </option>
   </component>
 </project>
