@@ -16,6 +16,7 @@ public class ServiceProducer2Application {
     RestTemplate restTemplate() {
         return new RestTemplate();
     }
+
     public static void main(String[] args) {
         SpringApplication.run(ServiceProducer2Application.class, args);
     }

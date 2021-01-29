@@ -31,21 +31,21 @@ public class RibbonController {
         json.put("age", 18);
         json.put("name", "小芳");
         json.put("address", "广东深圳");
-        String result = this.restTemplate.postForObject(urlPost,json,String.class);
+        String result = this.restTemplate.postForObject(urlPost, json, String.class);
         return result;
     }
 
     @GetMapping("/getPoducerInfo")
     public String getPoducerInfo() {
-        Integer id=1;
-        String result = this.restTemplate.getForObject(urlGet+id,String.class);
+        Integer id = 1;
+        String result = this.restTemplate.getForObject(urlGet + id, String.class);
         return result;
     }
 
     @GetMapping("/getPortInfo/{id}")
     public String produceGet(@PathVariable("id") Integer id) {
-        log.info("传入参数为   {}",id);
-        id+=1;
-        return "调用服务的端口号为：" + serverPort+ "   返回值为："+id;
+        log.info("传入参数为   {}", id);
+        id += 1;
+        return "调用服务的端口号为：" + serverPort + "   返回值为：" + id;
     }
 }
